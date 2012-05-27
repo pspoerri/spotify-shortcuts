@@ -17,17 +17,17 @@ class Spotify:
     def register(self):
         self.dbusregistration = media_key_handler.MediaKeyHandler(self, "SpotifyShortCutHandler")
 
-    def on_play_clicked(self):
-        print self.spotify.Play()
+    def on_play_pressed(self):
+        self.spotify.PlayPause()
 
-    def on_stop_clicked(self):
-        print self.spotify.Stop()
+    def on_stop_pressed(self):
+        self.spotify.Stop()
 
-    def on_forward_clicked(self):
-        print self.spotify.Next()
+    def on_forward_pressed(self):
+        self.spotify.Next()
 
-    def on_previous_clicked(self):
-        print self.spotify.Previous()
+    def on_previous_pressed(self):
+        self.spotify.Previous()
     
     
 

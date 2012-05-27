@@ -21,16 +21,17 @@ class MediaKeyHandler(object):
     def handle_mediakey(self, application, *mmkeys):
 #if application != self.app:
 #            return
-        print "Got key"
+        print "Got key:",mmkeys[0]
         for key in mmkeys:
+            
             if key == "Play":
-                self.app.on_play_clicked()
+                self.app.on_play_pressed()
             elif key == "Stop":
-                self.app.on_stop_clicked()
+                self.app.on_stop_pressed()
             elif key == "Next":
-                self.app.on_forward_clicked()
+                self.app.on_forward_pressed()
             elif key == "Previous":
-                self.app.on_previous_clicked()
+                self.app.on_previous_pressed()
  
     def on_window_focus(self, window):
         self.bus_object.GrabMediaPlayerKeys(
